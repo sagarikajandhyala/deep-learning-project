@@ -43,4 +43,7 @@ The existing farming information sites are not dealing with the pest classificat
 
 # Steps to run:
 1. Download the .pth model that i provided on gdrive link
-2. Run the command python main.py
+2. Run the command
+   ```
+   python main.py
+   ```
