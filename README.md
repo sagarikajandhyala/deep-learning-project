@@ -32,3 +32,7 @@ The existing farming information sites are not dealing with the pest classificat
 
 ## Officer Dashboard
 ![Screenshot 2023-12-06 002508](https://github.com/NikhilAMathew/Pest-Classification-and-Detection-System-using-Deep-Learning/assets/117088447/65110c1b-e7b2-4326-a61a-2eb19c8695fd)
+
+# Steps to run:
+1. Download the .pth model that i provided on gdrive link
+2. Run the command python main.py
