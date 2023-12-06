@@ -23,6 +23,14 @@ The existing farming information sites are not dealing with the pest classificat
 5.	User-Friendly: User Interface (UI) makes it accessible to users without expertise in pest identification.
 6.	Detailed Information: Your project provides detailed information about detected pests, including descriptions and pesticides information.
 
+# Tools used 🛠️
+![icons8-visual-studio-code-48](https://github.com/NikhilAMathew/Pest-Classification-and-Detection-System-using-Deep-Learning/assets/117088447/39fbab4a-192c-4dc6-8a22-0219920b0610)
+![icons8-flask-50](https://github.com/NikhilAMathew/Pest-Classification-and-Detection-System-using-Deep-Learning/assets/117088447/e0129a35-f230-4f7d-a9d9-f625fc95d695)
+
+1. Platform: Jupyter notebook, Google Collab
+2. Libraries Used: Flask, Numpy, Pandas, Torch, PyMongo 
+
+
 
 ## Prediction page
 ![Screenshot 2023-12-05 234905](https://github.com/NikhilAMathew/Pest-Classification-and-Detection-System-using-Deep-Learning/assets/117088447/a76d6075-cf97-43d8-887b-d98ddc40794c)
