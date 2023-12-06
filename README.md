@@ -1,4 +1,4 @@
-# Pest-Classification-and-Detection-System-using-Deep-Learning
+# Pest Classification and Detection System using Deep Learning
 ![Screenshot 2023-12-05 234948](https://github.com/NikhilAMathew/Pest-Classification-and-Detection-System-using-Deep-Learning/assets/117088447/4b3420f6-d067-4138-adaa-03eaf5a524ee)
 
 
