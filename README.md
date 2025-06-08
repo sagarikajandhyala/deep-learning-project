@@ -42,7 +42,7 @@ The existing farming information sites are not dealing with the pest classificat
 ![Screenshot 2023-12-06 002508](https://github.com/NikhilAMathew/Pest-Classification-and-Detection-System-using-Deep-Learning/assets/117088447/65110c1b-e7b2-4326-a61a-2eb19c8695fd)
 
 # Steps to run ⚙️
-1. Download [pest_model.pth](https://drive.google.com/drive/folders/1m5Smd1krBRKm9nlnJKGfuuWvfeV_FSuD)
+1. Download [pest_model.pth](https://drive.google.com/drive/folders/1Fb1J3y-kVtWnOmW-K21Bb-bIz6wlffdL?usp=sharing)
 2. Create folder *models* and place *pest_model.pth* into that folder.
 3. Run the command
    ```
