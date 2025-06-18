@@ -1,11 +1,189 @@
-{% extends 'layout.html' %} {% block body %}
+{% extends 'layout.html' %}
+{% block body %}
 
-            <div class="content">
-                <h1>WORRIED WITH VARIOUS PESTS?</h1>
-                <p style="font-size: 22px;">Don't worry, we will help you out with fastest Pest Identification system ever!</p>
-                <div style="align-items: center;">
-                    <button type="button" onclick="window.location.href = 'predict';"><span></span> IDENTIFY </button>
-                </div>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+        margin: 0;
+        padding: 0;
+    }
 
-            
+    .hero {
+        text-align: center;
+        padding: 60px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        color: #1b5e20;
+        margin-bottom: 20px;
+        animation: fadeInDown 1s ease;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        color: #444;
+        max-width: 700px;
+        margin: auto;
+        animation: fadeInUp 1s ease;
+    }
+
+    .hero img {
+        width: 280px;
+        margin: 30px 0;
+        animation: fadeInZoom 1.2s ease;
+    }
+
+    .cta-btn {
+        background: #43a047;
+        border: none;
+        color: #fff;
+        padding: 14px 28px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-btn:hover {
+        background: #2e7d32;
+        transform: scale(1.05);
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 60px 20px;
+        background: #f1f8e9;
+    }
+
+    .feature-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        max-width: 360px;
+        flex: 1 1 320px;
+        text-align: center;
+        overflow: hidden;
+        animation: fadeInCard 0.8s ease;
+    }
+
+    .feature-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+        color: #33691e;
+        margin: 18px 10px 10px;
+    }
+
+    .feature-card p {
+        color: #555;
+        font-size: 1rem;
+        padding: 0 20px 25px;
+    }
+
+    .footer {
+        background: #2e7d32;
+        color: white;
+        padding: 40px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .footer div {
+        margin: 10px 20px;
+        min-width: 180px;
+    }
+
+    .footer h4 {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+
+    .footer p, .footer a {
+        font-size: 0.9rem;
+        color: #c8e6c9;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInZoom {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInCard {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="hero">
+    <h1>Worried About Crop Pests?</h1>
+    <p>Identify, understand, and control pests with our AI-powered detection system built for Indian agriculture.</p>
+    <img src="{{ url_for('static', filename='images/pest_icon.png') }}" alt="Pest Icon" />
+    <br>
+    <button class="cta-btn" onclick="window.location.href = 'predict';">🔍 Identify Pest Now</button>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/detection.png') }}" alt="Detection">
+        <h3>Instant Pest Detection</h3>
+        <p>Upload an image of the pest and instantly identify it using our trained deep learning model.</p>
+    </div>
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/database.jpeg') }}" alt="Pest Info">
+        <h3>Extensive Pest Info</h3>
+        <p>Explore detailed descriptions, symptoms, and recommended pesticide treatments for over 40 common pests.</p>
+    </div>
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/dashboard.png') }}" alt="Dashboard">
+        <h3>Officer Dashboard</h3>
+        <p>Government officers can manage pest data, respond to farmer queries, and monitor pest trends regionally.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <div>
+        <h4>About</h4>
+        <p>Pest Detection System for Indian Agriculture</p>
+    </div>
+    <div>
+        <h4>Support</h4>
+        <a href="mailto:support@pestai.in">Contact Us</a><br>
+        <a href="#">FAQs</a>
+    </div>
+    <div>
+        <h4>Developed By</h4>
+        <p>Team AgroAI | © 2025</p>
+    </div>
+</div>
+
 {% endblock %}
+
+
