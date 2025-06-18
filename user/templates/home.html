@@ -1,34 +1,137 @@
-{% extends 'layout.html' %} {% block body %}
+{% extends 'layout.html' %}
+{% block body %}
 
-  <form class="form-signin" method=post enctype=multipart/form-data>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
+    margin: 0;
+    padding: 0;
+  }
 
-    <div class="bc-1">
-      <div class="card">
-        <h2>IDENTIFY THE PEST THAT WAS CAUGHT BY YOUR PLANT</h2>
-        <p>Upload an image of pest.</p>
-        <div class="card-img-body">
-        <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
-        <br>
-        <br>
-        <img id="output-image" class="card-img d-block" /><br>
-        </div>
-        <button type="submit"><span></span>Predict</button>
-        
-      </div>
-    </div>
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+  }
 
-  </form>
+  .card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+  }
 
+  .card h2 {
+    color: #1b5e20;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
 
-<script type="text/javascript">
-  function preview_image(event) {
-    var reader = new FileReader();
-    reader.onload = function () {
-      var output = document.getElementById('output-image')
-      output.src = reader.result;
+  .card p {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+
+  .form-control-file {
+    display: block;
+    margin: 0 auto 20px;
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px dashed #a5d6a7;
+    border-radius: 8px;
+    background-color: #f1f8e9;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .form-control-file:hover {
+    background-color: #e0f2f1;
+  }
+
+  .preview-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  #output-image {
+    max-width: 260px;
+    max-height: 260px;
+    border-radius: 10px;
+    border: 1px solid #cfd8dc;
+    padding: 5px;
+    background: #f9fbe7;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .submit-btn {
+    background: #388e3c;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 15px;
+  }
+
+  .submit-btn:hover {
+    background: #2e7d32;
+    transform: scale(1.05);
+  }
+
+  @keyframes fadeIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
     }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+
+<div class="form-wrapper">
+  <form class="form-signin" method="POST" enctype="multipart/form-data">
+    <div class="card">
+      <h2>🌿 Detect the Pest Affecting Your Crop</h2>
+      <p>Upload a clear image of the pest. Our AI model will identify it instantly and guide you on treatment.</p>
+
+      <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" required>
+
+      <div class="preview-container">
+        <img id="output-image" alt="Image Preview" />
+      </div>
+
+      <button type="submit" class="submit-btn">🔍 Predict Pest</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function preview_image(event) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      const output = document.getElementById('output-image');
+      output.src = reader.result;
+    };
     reader.readAsDataURL(event.target.files[0]);
   }
 </script>
 
 {% endblock %}
+
+
+
