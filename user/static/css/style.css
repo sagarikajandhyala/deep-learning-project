@@ -438,14 +438,17 @@ li > a:only-child:after { content: ''; }
 .banner-top1,
 .banner-top2,
 .banner-top3 {
-    min-height: 770px;
+    min-height: 100vh; /* Full screen height */
+    height: auto; 
 }
 .overlay {
-    min-height: 770px;
+	min-height: 100vh; /* Full screen height */
+    height: auto; 
     background: rgba(0, 0, 0, 0.4);
 }
 .overlay1 {
-    min-height: 770px;
+    min-height: 100vh; /* Full screen height */
+    height: auto; 
     background: rgba(0, 0, 0, 0.5);
 }
 
